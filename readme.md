@@ -16,7 +16,7 @@ Create systemjs.config.js configuration file.
 Copy following content:
 
 Start of systemjs.config.js
-
+```
 System.config({
     paths: {
       'npm:': '/node_modules/'
@@ -42,18 +42,20 @@ System.config({
       'zone.js': {}
     }
   });
-
+```
 // End of systemjs.config.js
 
 Install Angular core dependencies
+```
 npm i --save @angular/core @angular/compiler @angular/common @angular/platform-browser @angular/platform-browser-dynamic
+```
 
 Now we need to setup TypeScript
-
+```
 npm i --save-dev typescript
-
+```
 Create tsconfig.json and copy the following content:
-
+```
 {
     "compilerOptions": {
       "outDir": "dist",
@@ -67,14 +69,15 @@ Create tsconfig.json and copy the following content:
       ]
     }
   }
-
+```
 Add the following script to package.json
-
+```
 "scripts": {
     "build": "tsc"
 },
-
+```
 Create a file called index.html with the following content:
+```
 <html>
   <head>
     <title>Hello, Angular</title>
@@ -90,12 +93,12 @@ Create a file called index.html with the following content:
     </script>
   </body>
 </html>
-
+```
 Create the /dist folder.
 Create a src/app folder.
 Create the app.component.ts file into src/app.
 Add the basic app.component structure.
-
+```
 import { Component } from '@angular/core';
 
 @Component({
@@ -105,9 +108,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
     name: 'Angular';
 }
-
+```
 Create the main module of our application app.module.ts file into src/app.
-
+```
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -119,27 +122,33 @@ import { BrowserModule } from '@angular/platform-browser';
 })
 export class AppModule {    
 }
-
+```
 Create the main.ts file at the root of the src folder.
 Add the following content:
-
+```
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 import { platformBrowserDynamic } 
                      from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 platformBrowserDynamic().bootstrapModule(AppModule);
-
-Now compile it with npm run build
-
+``
+Now compile it with:
+```
+npm run build
+```
 Install a simple http server called live-server.
+```
 npm i --save-dev live-server
-
+```
 Update the package.json file to add the server.
+```
 "scripts": {
   "build": "tsc",
   "start": "live-server"
 },
-
-Run it with npm start.
-
+```
+Run it with:
+```
+npm start.
+```
