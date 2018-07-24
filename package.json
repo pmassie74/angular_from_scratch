@@ -1,0 +1,29 @@
+{
+  "name": "scratch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^6.0.9",
+    "@angular/compiler": "^6.0.9",
+    "@angular/core": "^6.0.9",
+    "@angular/platform-browser": "^6.0.9",
+    "@angular/platform-browser-dynamic": "^6.0.9",
+    "core-js": "^2.5.7",
+    "rxjs": "^6.2.2",
+    "systemjs": "^0.21.4",
+    "zone.js": "^0.8.26"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "typescript": "^2.9.2"
+  }
+}
