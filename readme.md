@@ -2,16 +2,19 @@ This readme describes how to build a minimal Angular app from scratch
 
 We will use SystemJS instead of Webpack to load ESM
 
-Call npm init -y to get minimum package.json file.
+Call npm init to get minimum package.json file with the following:
+```
+npm init -y
+``` 
 
 We need the following third-party dependencies.
 - core-js
 - rxjs
 - zone.js
-
+```
 npm i --save core.js zone.js rxjs
 npm i --save systemjs
-
+```
 Create systemjs.config.js configuration file.
 Copy following content:
 
